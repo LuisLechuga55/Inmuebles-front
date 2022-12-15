@@ -1,0 +1,25 @@
+.Navbar__Compras{
+  width: 50vw;
+  height: auto;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+.Navbar__link a{
+  color: #fff;
+  text-decoration: none;
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover{
+    color: orange;
+  }
+}
