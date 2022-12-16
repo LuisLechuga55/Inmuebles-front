@@ -1,9 +1,18 @@
-import React from 'react'
+import { useContext, useEffect } from 'react'
+import { AuthContext } from '../../context/AuthContext'
+import { useNavigate } from 'react-router-dom'
+import './logout.scss'
 
 function Logout() {
-  return (
-    <div>Logout</div>
-  )
+  const { logoutCostumer } = useContext(AuthContext)
+  const navigate = useNavigate(AuthContext)
+
+  useEffect(() => {
+    logoutCostumer()
+    navigate('/login')
+  }, [])
+
+  return <></>
 }
 
 export default Logout

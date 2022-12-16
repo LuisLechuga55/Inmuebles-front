@@ -1,8 +1,13 @@
-import React from 'react'
+import { useContext } from 'react'
+import { AuthContext } from '../../context/AuthContext'
 import { Link } from 'react-router-dom'
 import './navbar.scss'
 
 function Navbar() {
+  const { costum } = useContext(AuthContext)
+
+  console.log(costum)
+
   return (
     <nav className='navbar navbar-expand-lg navbar-dark bg-dark p-3' aria-label='Ninth navbar example'>
       <div className='container'>
@@ -154,8 +159,8 @@ function Navbar() {
         </div>
 
       <div className='Navbar__link mx-4'>
-        <Link to='/'>
-          Publicar
+        <Link to='/logout'>
+          Publicar(Cerrar Sesion)
         </Link>
       </div>
 
